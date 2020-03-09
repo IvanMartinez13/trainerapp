@@ -1,0 +1,179 @@
+\hypertarget{classUsuario}{}\section{Usuario Class Reference}
+\label{classUsuario}\index{Usuario@{Usuario}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classUsuario_af72cadb2cfa815ef3318f2544d1df4ef}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_af72cadb2cfa815ef3318f2544d1df4ef}{Usuario\+::get\+Id}} Devuelve el id del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsuario_a99d91848f5937e76640798e9dadabc5f}{load}} (J\+S\+ON datos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a99d91848f5937e76640798e9dadabc5f}{Usuario\+::load}} Función para cargar los datos del formulario de registro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUsuario_abc771f3aad5fac378fff2b2fda9e77f7}{load}} (Q\+Sql\+Database db, int id)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a99d91848f5937e76640798e9dadabc5f}{Usuario\+::load}} Función para cargar los datos de la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUsuario_a11bb14b70194d87b80fd192d5d0a65fa}{save}} (Q\+Sql\+Database db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a11bb14b70194d87b80fd192d5d0a65fa}{Usuario\+::save}} Guarda los datos en la base de datos. Si es un usuario nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se hace un U\+P\+D\+A\+TE. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUsuario_a23251d116c77cfa0ce32fee22b60ae10}{remove}} (Q\+Sql\+Database db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a23251d116c77cfa0ce32fee22b60ae10}{Usuario\+::remove}} Elimina el usuario de la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUsuario_a95a63c1e8c167f7084198257dbb0ad60}{logear}} (Q\+Sql\+Database db, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a95a63c1e8c167f7084198257dbb0ad60}{Usuario\+::logear}} Función para cargar los datos del inicio de sesión y los comparan con los datos de la base de datos. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classUsuario_a872132bd9723c5d50fcb13cafb9e32f3}{Login}} (int id, J\+S\+ON recibido, bool ok)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a872132bd9723c5d50fcb13cafb9e32f3}{Usuario\+::\+Login}} Responde al cliente después de que intente iniciar sesión. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classUsuario_a367203925ceb4d4c5bba0dd9cde3df5e}{Logout}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a367203925ceb4d4c5bba0dd9cde3df5e}{Usuario\+::\+Logout}} Responde al cliente después de que cierre la sesión. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classUsuario_a5e04b1906fba3578e33b44a7e4e32aae}{Register}} (int id)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classUsuario_a5e04b1906fba3578e33b44a7e4e32aae}{Usuario\+::\+Register}} Responde al cliente después de que registre un usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classUsuario_af72cadb2cfa815ef3318f2544d1df4ef}\label{classUsuario_af72cadb2cfa815ef3318f2544d1df4ef}} 
+\index{Usuario@{Usuario}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int Usuario\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_af72cadb2cfa815ef3318f2544d1df4ef}{Usuario\+::get\+Id}} Devuelve el id del usuario. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a99d91848f5937e76640798e9dadabc5f}\label{classUsuario_a99d91848f5937e76640798e9dadabc5f}} 
+\index{Usuario@{Usuario}!load@{load}}
+\index{load@{load}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Usuario\+::load (\begin{DoxyParamCaption}\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a99d91848f5937e76640798e9dadabc5f}{Usuario\+::load}} Función para cargar los datos del formulario de registro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUsuario_abc771f3aad5fac378fff2b2fda9e77f7}\label{classUsuario_abc771f3aad5fac378fff2b2fda9e77f7}} 
+\index{Usuario@{Usuario}!load@{load}}
+\index{load@{load}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Usuario\+::load (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a99d91848f5937e76640798e9dadabc5f}{Usuario\+::load}} Función para cargar los datos de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUsuario_a95a63c1e8c167f7084198257dbb0ad60}\label{classUsuario_a95a63c1e8c167f7084198257dbb0ad60}} 
+\index{Usuario@{Usuario}!logear@{logear}}
+\index{logear@{logear}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{logear()}{logear()}}
+{\footnotesize\ttfamily bool Usuario\+::logear (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a95a63c1e8c167f7084198257dbb0ad60}{Usuario\+::logear}} Función para cargar los datos del inicio de sesión y los comparan con los datos de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a872132bd9723c5d50fcb13cafb9e32f3}\label{classUsuario_a872132bd9723c5d50fcb13cafb9e32f3}} 
+\index{Usuario@{Usuario}!Login@{Login}}
+\index{Login@{Login}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily J\+S\+ON Usuario\+::\+Login (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido,  }\item[{bool}]{ok }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a872132bd9723c5d50fcb13cafb9e32f3}{Usuario\+::\+Login}} Responde al cliente después de que intente iniciar sesión. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a367203925ceb4d4c5bba0dd9cde3df5e}\label{classUsuario_a367203925ceb4d4c5bba0dd9cde3df5e}} 
+\index{Usuario@{Usuario}!Logout@{Logout}}
+\index{Logout@{Logout}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Logout()}{Logout()}}
+{\footnotesize\ttfamily J\+S\+ON Usuario\+::\+Logout (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a367203925ceb4d4c5bba0dd9cde3df5e}{Usuario\+::\+Logout}} Responde al cliente después de que cierre la sesión. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a5e04b1906fba3578e33b44a7e4e32aae}\label{classUsuario_a5e04b1906fba3578e33b44a7e4e32aae}} 
+\index{Usuario@{Usuario}!Register@{Register}}
+\index{Register@{Register}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily J\+S\+ON Usuario\+::\+Register (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a5e04b1906fba3578e33b44a7e4e32aae}{Usuario\+::\+Register}} Responde al cliente después de que registre un usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a23251d116c77cfa0ce32fee22b60ae10}\label{classUsuario_a23251d116c77cfa0ce32fee22b60ae10}} 
+\index{Usuario@{Usuario}!remove@{remove}}
+\index{remove@{remove}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Usuario\+::remove (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a23251d116c77cfa0ce32fee22b60ae10}{Usuario\+::remove}} Elimina el usuario de la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUsuario_a11bb14b70194d87b80fd192d5d0a65fa}\label{classUsuario_a11bb14b70194d87b80fd192d5d0a65fa}} 
+\index{Usuario@{Usuario}!save@{save}}
+\index{save@{save}!Usuario@{Usuario}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Usuario\+::save (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classUsuario_a11bb14b70194d87b80fd192d5d0a65fa}{Usuario\+::save}} Guarda los datos en la base de datos. Si es un usuario nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se hace un U\+P\+D\+A\+TE. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+U\+P\+D\+A\+TE
+
+I\+N\+S\+E\+RT 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+usuario.\+h\item 
+\mbox{\hyperlink{usuario_8cpp}{usuario.\+cpp}}\end{DoxyCompactItemize}

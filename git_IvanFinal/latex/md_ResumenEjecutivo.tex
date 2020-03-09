@@ -1,0 +1,21 @@
+
+
+
+
+{\bfseries En que consiste Trainer\+App}
+
+Trainer\+App es una aplicación orientada a los entrenadores de fútbol, que te permite crear ejercicios y entrenamientos para que puedan usarlos con sus respectivos equipos.
+
+La aplicación está conectada a una base de datos donde se guardan los ejercicios y entrenamientos de cada usuario. Por el momento es una aplicación web, pero no se descarta la idea de crear una aplicación para dispositivos Android y I\+OS. El cliente se conecta al servidor utilizando un socket, a partir de ahí el cliente realiza peticiones al servidor enviandole mensajes en formato J\+S\+ON. El servidor se encarga de resolver dichas peticiones.
+
+La base de datos esta creada con Posgre\+S\+QL. La aplicacion del cliente esta hecha con H\+T\+ML , C\+SS y Java\+Script. Y el servidor esta hecho con c++, en un entorno de desarrollo de QT y he utilizado dos proyectos de Github (nholman J\+S\+ON y I\+X\+Web\+Socket).
+
+Me hubiera gustado añadirle cosas como por ejemplo\+: exportar los entrenamientos como P\+DF y haberle dedicado mas tiempo a la pagina web.
+
+{\bfseries Gestion de errores} Todos estos errores comentados aqui han sido resueltos mediante búsquedas en la documentacion de QT , búsquedas por internet y pedir ayuda al profesor.
+
+1) Problemas al crear los certificados y al establecer las opciones T\+LS. 2) Problemas con el formato de los valores de cada campo de un mensaje J\+S\+ON. 3) Al realizar los tests me di cuenta que tenia que cambiar el código del proyecto principal. Estableciendo asi la base de datos como una variable estática. 4) Problemas con el git. Tuve que reiniciar la carpeta .git perdiendo asi las primeras entradas. 5) Tuve que consultar la documentacion de la pagina W3\+Schools para ver como hacer algunas cosas con Java\+Script y con H\+T\+ML 6) Tuve problemas al utilizar la base de datos de los tests, hasta que me di cuenta que tenia que pasarle a las funciones del proyecto la base de datos como un parametro. 7) Cuando queria listar ejercicios, me di cuenta que necesitaba si o si un metodo to\+J\+S\+O\+N(). 8) Al pricipio no tenia bien ordenado el H\+T\+ML con el C\+SS y el Java\+Script en archivos separados. 9) Problemas con la guia de estilo, al principio no seguia ninguna guia de estilo, hasta que empece a cometer errores debido a no seguir una guia de estilo. 10) No he podido incluir algunas funcionalidades que me hubieran gustado tener por falta de tiempo. Pero la parte principal de la aplicación es funcional.
+
+
+
+ 

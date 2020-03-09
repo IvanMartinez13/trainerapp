@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+
+	    <div id = "menu" style = "display: none">
+	        <button id="menuButton" onclick = "mostrarEjercicios()">Ejercicios</button>
+	        <button id="menuButton" onclick = "mostrarEntrenamientos()">Entrenamientos</button>
+	        <button id="menuButton" onclick = "logout() ,Inicio()" style = "float: right; background-color: red">Salir</button>
+	    </div>
+
+	    <div id="background" align = center>
+			<header>
+			<div id = "logotipo">
+				<center>
+					<img id = "img" src="logotipo.png">
+				</center>
+			</div>
+			</header>
+			<center>
+				<div id = contenido>
+					<div id = "verEjercicios" class = "contenido" style = "display : none">
+						<p id = "errorBorrar" style = "color : red ;  display : none">Este ejercicio forma parte de uno o varios entrenamientos, elimina o cambia esos entrenamientos</p>
+
+						<div id = "modalEjercicio" style="margin-top: 0; margin-bottom: 0; display: none;">
+							<p>¿Seguro que deseas eliminar este ejercicio?</p>
+							<button onclick="deleteEjercicio() ; getElementById('modalEjercicio').style.display = 'none'">Eliminar</button>
+							<button onclick="getElementById('modalEjercicio').style.display = 'none'">Cancelar</button>
+						</div>
+
+
+						<select id = "lista" size="8" onchange="activarbotonesEjercicios()"> </select>
+						<button id = "actualizarEjercicio" onclick="updateEjercicio()" disabled>Actualizar</button> 
+						<button id = "borrarEjercicio"  onclick="getElementById('modalEjercicio').style.display = 'block'" disabled>Borrar</button>
+						<button id = "inicioSesion" onclick="mostrarEjercicios()" style="width: 25%"> Cancelar </button> <br>
+					</div>
+
+					<div id="verEntrenamientos" class = "contenido" style = "display : none">
+
+						<div id = "modalEntrenamiento" style="margin-top: 0; margin-bottom: 0; display: none;">
+							<p>¿Seguro que deseas eliminar este entrenamiento?</p>
+							<button onclick="deleteEntrenamiento() ; getElementById('modalEntrenamiento').style.display = 'none'">Eliminar</button>
+							<button onclick="getElementById('modalEntrenamiento').style.display = 'none'">Cancelar</button>
+						</div>
+
+
+
+						<select id = "listaEntrenamientos" size="8" onchange="activarbotonesEntrenamientos()"> </select>
+						<button id = "actualizarEntrenamiento" onclick="updateEntrenamiento()" disabled>Actualizar</button> 
+						<button id = "borrarEntrenamiento" onclick="getElementById('modalEntrenamiento').style.display = 'block'" disabled>Borrar</button>
+						<button id = "inicioSesion" onclick="mostrarEntrenamientos()" style="width: 25%"> Cancelar </button> <br>
+					</div>
+
+			        <div id = "login" align = center style = "display: none">
+			            <h1>Iniciar Sesión</h1>
+			            <label>Nombre de Usuario:</label><br>
+			            <input id="nombre" type="text" placeholder="Nombre de Usuario:" name="uname"><br><br>
+			            <label>Contraseña:</label><br>
+			            <input id="contrasenya" type="password" placeholder="Contraseña" name="psw"><br><br>
+			            <button id = "inicioSesion" onclick="login()"> Entrar </button> <br>
+			            <button id = "inicioSesion" onclick="mostrarRegistro()"> No estoy registrado </button> <br>
+			            <p id = "error" style = "color : red ;  display : none" >La contraseña y el nombre de usuario no existen</p>
+			        </div>
+			        <div id="registro" align = center style = "display: none">
+			        	<form id = "form" onsubmit="register(); return false">
+							<h1>Registrarse</h1>
+							<label>Nombre de Usuario:</label><br>
+							<input id="nombreRegistro" type="text" placeholder="Nombre de Usuario" name="uname" required><br><br>
+							<label>Email:</label><br>
+							<input id="correoElectronico" type="email" placeholder="Email" name="email" required><br><br>
+							<label>Contraseña:</label><br>
+							<input id="contrasenyaRegistro" type="password" placeholder="Contraseña" name="psw" required><br><br>
+							<input id = "inicioSesion" type="submit"  class="boton" value="Registrarse"></input> <br>
+							<button id = "inicioSesion" onclick="Inicio()"> Cancelar </button> <br>
+							<p id = "errorRegistro" style = "color : red ;  display : none" >Se ha producido un error</p>
+			        	</form>
+			        </div>
+
+			        <div id = "ejercicios" class = "contenido" style = "display: none" align = "center">
+			        	<h1>Ejercicios</h1>
+			            <button style="width: 50%" onclick = "resetCrearEjercicio(),mostarCrearEjercicio()">Crear Ejercicio</button><br>
+			            <button style="width: 50%" onclick = "mostarVerEjercicios()">Ver Ejercicios</button>
+			        </div>
+			        <div id = "crearEjercicio" class = "contenido" style = "display: none" align = "center">
+				        <form id = "form1" onsubmit="crearEjercicio(); return false">
+				            <h1 id = "tituloEjercicio">Crear Ejercicio</h1>
+				            <label>Id del ejercicio:</label><br>
+				            <input id="idEjercicio" type="text" placeholder="id" name="objetivo" readOnly style = "width: 25%; margin-left: 10%; float: left; background-color: grey; "></input><br><br><br>
+				            <label>Objetivo:</label><br>
+				            <input id="objetivo" type="text" placeholder="Objetivo" name="objetivo" required></input><br><br>
+				            <label>Reglas , provocacion y consignas:</label><br>
+				            <textarea id="reglas" type="text" placeholder="Reglas, provocación y consignas" name="reglas" required></textarea><br><br>
+				            <label>Explicación:</label><br>
+				            <textarea id="explicacion" type="text" placeholder="Explicación" name="reglas" required></textarea><br><br>
+				            <label>Espacio:</label><br>
+				            <input id="espacio" type="text" placeholder="Espacio" name="espacio" required><br><br>
+				            <label>Tiempo de trabajo:</label><br>
+				            <input id="tiempotrabajo" type="number" placeholder="Tiempo trabajo(minutos)" name="tiempotrabajo" required><br><br>
+				            <label>Tiempo de recuperación:</label><br>
+				            <input id="tiemporecuperacion" type="number" placeholder="Tiempo recuperación(minutos)" name="tiemporecuperacion" required><br><br>
+				            <input type="submit" value="Guardar" class = "boton">  </input><br>
+				            <button onclick="mostrarEjercicios()"> Cancelar </button><br>
+				            <p id = "errorEjercicio" style = "color : red ;  display : none" >Se ha producido un error</p>
+				        </form>
+			        </div>
+			        <div id = "entrenamientos" class = "contenido" style = "display: none" align = "center">
+			        	<h1>Entrenamientos</h1>
+			            <button style="width: 50%" onclick = "resetCrearEntrenamiento() , mostrarCrearEntrenamientos()">Crear Entrenamiento</button>
+			            <button style="width: 50%" onclick = "mostrarVerEntrenamientos()">Ver Entrenamientos</button>
+			        </div>
+
+
+			        <div id="crearEntrenamiento" class = "contenido" style = "display: none">
+			        	<form id = "form2" onsubmit="crearEntrenamiento(); return false">
+				            <h1 id = "tituloEntrenamiento">Crear Entrenamiento</h1>
+				            <label>Id del Entrenamiento:</label><br>
+				            <input id="idEntrenamiento" type="text" placeholder="id" name="objetivo" readOnly style = "width: 25%; margin-left: 10%; float: left; background-color: grey; "></input><br><br><br>
+				            <label>Objetivo:</label><br>
+				            <input id="objetivoEntrenamiento" type="text" placeholder="Objetivo" name="objetivo" required></input><br><br>
+				            <label>Numero de Jugadores:</label><br>
+				            <input id="numeroJugadores" type="text" placeholder="Numero jugadores" name="numeroJugadores" required></input><br><br>
+				            <label>Material necesario:</label><br>
+				            <input id="material" type="text" placeholder="Material necesario" name="material" required></input><br><br>
+				            <label>Tiempo de duración:</label><br>
+				            <input id="tiempoDuracionEntrenamiento" type="number" placeholder="Tiempo duración" name="tiempoDuracionEntrenamiento" required></input><br><br>
+				            <h3>Parte Inicial</h3>
+
+				            <select id="parteInicial" type="list" name="parte Inicial" required = "true">
+				            </select><br><br>
+
+				            <label id = "antes" class = "antes" style=" display: none">Parte inicial antigua:</label>
+				            <input id="parteInicial_old"  name="parteInicial_old" readonly="true" style="display: none; background-color: grey"></input><br><br>
+
+				            <h3>Parte Principal</h3>
+				            <select id="partePrincipal" type="list" name="parte principal" required = "true">
+				            </select><br><br><br>
+
+				            <label id= "antes1" class = "antes" style=" display: none">Parte principal antigua:</label>
+				             <input id="partePrincipal_old" name="partePrincipal_old" readonly="true" style="display: none; background-color: grey"></input><br><br>
+
+				            <h3>Parte Final</h3>
+				            <select id="parteFinal" type="list" name="parte final" required = "true">
+				            </select><br><br><br>
+				            <label id= "antes2" class = "antes" style=" display: none">Parte final antigua</label>
+				             <input id="parteFinal_old" name="parteFinal_old" readonly="true" style="display: none ; background-color: grey"></input><br><br>
+				             <input type="submit" value="Guardar" class = "boton">  </input><br>
+				            <button onclick="mostrarEntrenamientos()"> Cancelar </button><br>
+				            <p id = "errorEntrenamiento" style = "color : red ;  display : none" >Se ha producido un error</p>
+
+			        	</form>
+
+			        </div>	
+			   </div>
+			</center>
+	      <footer>
+			<div id = "logotipo">
+				<center>
+					<img id = "img" src="logotipo.png">
+				</center>
+			</div>
+	      </footer>
+	    </div>
+
+
+	</body>
+	<script src="script.js"></script> 
+	<script>
+	//Comunicacion servidor
+	let socket = new WebSocket("ws://localhost:9990");
+
+	socket.onopen = function(e) {
+	  console.log("[open] Connection established");
+	  console.log("Sending to server");
+	  socket.send('{"message" : "Welcome"}');
+	};
+
+	socket.onmessage = function(event) {
+	  var object = JSON.parse(event.data);
+
+	  if(object.type == "message"){
+
+	    console.log(object.message);
+
+	  }
+	   if(object.type=="ejercicio"){
+
+	  	var element = object.ejercicios.ejercicio;
+	  	verEjercicio(element);
+
+	  }
+
+	  if(object.type=="entrenamiento"){
+
+	  	var element = object.entrenamientos.entrenamiento;
+	  	verEntrenamiento(element);
+
+	  }
+	  if (object.respuesta == "Este ejercicio forma parte de uno o varios entrenamientos, elimina o cambia esos entrenamientos"){
+	  	document.getElementById("errorBorrar").style.display = "block";
+	  }
+	  if(object.respuesta == "ejercicio borrado"){
+	  	document.getElementById("errorBorrar").style.display = "none";
+	  }
+	  
+	  if (object.respuesta == "se ha iniciado sesión"){
+
+	    entrar(event);
+	    document.getElementById("nombre").value = "";
+	    document.getElementById("contrasenya").value = "";
+	    
+
+	  }
+	  else if (object.respuesta == "La contraseña y el nombre de usuario no coinciden")
+	  {
+	  	document.getElementById("error").style.display = "block";
+	  }
+
+	  if(object.respuesta == "lista de ejercicios"){
+
+	    vaciarListas();
+	    array1 = object.ejercicios;
+	    llenarListas(array1);
+	    
+	  }
+
+	  if(object.respuesta == "no hay ejercicios"){
+
+	    vaciarListas();
+
+	  }
+
+	  if(object.respuesta == "lista de entrenamientos"){
+
+	    var lista = document.getElementById("listaEntrenamientos");
+	    lista.length=0;
+	    array1 = object.entrenamientos;
+	    array1.forEach(element => listaDeEntrenamientos(element));
+
+	  }
+
+	  if(object.respuesta == "no hay entrenamientos"){
+
+	    var listaEntrenamientos=document.getElementById("listaEntrenamientos");
+	    listaEntrenamientos.length=0;
+	    
+	  }
+
+	  entrar(event);
+	  console.log(object);
+
+	};
+
+
+	socket.onclose = function(event) {
+	  if (event.wasClean) {
+	    alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+	  } else {
+	    // e.g. server process killed or network down
+	    // event.code is usually 1006 in this case
+	    alert('[close] Connection died');
+	  }
+	};
+
+	socket.onerror = function(error) {
+	  alert(`[error] ${error.message}`);
+	};
+	</script>
+</html>

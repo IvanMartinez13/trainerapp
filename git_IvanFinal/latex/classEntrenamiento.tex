@@ -1,0 +1,218 @@
+\hypertarget{classEntrenamiento}{}\section{Entrenamiento Class Reference}
+\label{classEntrenamiento}\index{Entrenamiento@{Entrenamiento}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}{load}} (Q\+Sql\+Database db, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}{Entrenamiento\+::load}} Carga los datos de un formulario para crear o actualizar un Entrenamiento.\+s. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntrenamiento_a61ef0379c2793e1562b90597f6c37888}{load}} (Q\+Sql\+Database db, int id)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}{Entrenamiento\+::load}} Carga los datos de un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} de la bbdd. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntrenamiento_a4b97075e3cb6f52c3e1bf2117e276875}{save}} (Q\+Sql\+Database db, int id\+User)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a4b97075e3cb6f52c3e1bf2117e276875}{Entrenamiento\+::save}} Guarda un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} en la bbdd, si es un entrenamiento nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se hace un U\+P\+D\+A\+TE. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEntrenamiento_adedf18d9eef76aab0c4d6325de2ff175}{remove}} (Q\+Sql\+Database db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_adedf18d9eef76aab0c4d6325de2ff175}{Entrenamiento\+::remove}} Elimina un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}}. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEntrenamiento_a83b01d0a9094c4e1161ede2d86f1b5af}{listar}} (Q\+Sql\+Database db, int id, int id\+User, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a83b01d0a9094c4e1161ede2d86f1b5af}{Entrenamiento\+::listar}} Devuelve un J\+S\+ON con todos los entrenamientos de un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntrenamiento_ac8f24acdf64f5b3887f6388fb82f0d4f}{get\+Last}} (Q\+Sql\+Database db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_ac8f24acdf64f5b3887f6388fb82f0d4f}{Entrenamiento\+::get\+Last}} Recoge el ultimo \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} creado. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEntrenamiento_a4a0e1dcb5ff226db68e8621a7102ee12}{to\+J\+S\+ON}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a4a0e1dcb5ff226db68e8621a7102ee12}{Entrenamiento\+::to\+J\+S\+ON}} Transforma un entrenamiento a J\+S\+ON. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEntrenamiento_ae9d4c8c7082016c354e627456c8f067c}{crear\+Entrenamiento}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_ae9d4c8c7082016c354e627456c8f067c}{Entrenamiento\+::crear\+Entrenamiento}} Responde al cliente por crear un entrenameinto. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEntrenamiento_a230ba578e3ecb690f966eb695f58fda4}{actualizar\+Entrenamiento}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a230ba578e3ecb690f966eb695f58fda4}{Entrenamiento\+::actualizar\+Entrenamiento}} Responde al cliente por actualizar un entrenamiento. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEntrenamiento_a78e00e1bdd4b78e879db628d6c8fcb78}{eliminar\+Entrenamiento}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEntrenamiento_a78e00e1bdd4b78e879db628d6c8fcb78}{Entrenamiento\+::eliminar\+Entrenamiento}} Responde al cliente por eliminar un entrenamiento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntrenamiento_a230ba578e3ecb690f966eb695f58fda4}\label{classEntrenamiento_a230ba578e3ecb690f966eb695f58fda4}} 
+\index{Entrenamiento@{Entrenamiento}!actualizar\+Entrenamiento@{actualizar\+Entrenamiento}}
+\index{actualizar\+Entrenamiento@{actualizar\+Entrenamiento}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{actualizar\+Entrenamiento()}{actualizarEntrenamiento()}}
+{\footnotesize\ttfamily J\+S\+ON Entrenamiento\+::actualizar\+Entrenamiento (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a230ba578e3ecb690f966eb695f58fda4}{Entrenamiento\+::actualizar\+Entrenamiento}} Responde al cliente por actualizar un entrenamiento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_ae9d4c8c7082016c354e627456c8f067c}\label{classEntrenamiento_ae9d4c8c7082016c354e627456c8f067c}} 
+\index{Entrenamiento@{Entrenamiento}!crear\+Entrenamiento@{crear\+Entrenamiento}}
+\index{crear\+Entrenamiento@{crear\+Entrenamiento}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{crear\+Entrenamiento()}{crearEntrenamiento()}}
+{\footnotesize\ttfamily J\+S\+ON Entrenamiento\+::crear\+Entrenamiento (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_ae9d4c8c7082016c354e627456c8f067c}{Entrenamiento\+::crear\+Entrenamiento}} Responde al cliente por crear un entrenameinto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_a78e00e1bdd4b78e879db628d6c8fcb78}\label{classEntrenamiento_a78e00e1bdd4b78e879db628d6c8fcb78}} 
+\index{Entrenamiento@{Entrenamiento}!eliminar\+Entrenamiento@{eliminar\+Entrenamiento}}
+\index{eliminar\+Entrenamiento@{eliminar\+Entrenamiento}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{eliminar\+Entrenamiento()}{eliminarEntrenamiento()}}
+{\footnotesize\ttfamily J\+S\+ON Entrenamiento\+::eliminar\+Entrenamiento (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a78e00e1bdd4b78e879db628d6c8fcb78}{Entrenamiento\+::eliminar\+Entrenamiento}} Responde al cliente por eliminar un entrenamiento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_ac8f24acdf64f5b3887f6388fb82f0d4f}\label{classEntrenamiento_ac8f24acdf64f5b3887f6388fb82f0d4f}} 
+\index{Entrenamiento@{Entrenamiento}!get\+Last@{get\+Last}}
+\index{get\+Last@{get\+Last}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{get\+Last()}{getLast()}}
+{\footnotesize\ttfamily void Entrenamiento\+::get\+Last (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_ac8f24acdf64f5b3887f6388fb82f0d4f}{Entrenamiento\+::get\+Last}} Recoge el ultimo \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} creado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntrenamiento_a83b01d0a9094c4e1161ede2d86f1b5af}\label{classEntrenamiento_a83b01d0a9094c4e1161ede2d86f1b5af}} 
+\index{Entrenamiento@{Entrenamiento}!listar@{listar}}
+\index{listar@{listar}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily J\+S\+ON Entrenamiento\+::listar (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id,  }\item[{int}]{id\+User,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a83b01d0a9094c4e1161ede2d86f1b5af}{Entrenamiento\+::listar}} Devuelve un J\+S\+ON con todos los entrenamientos de un usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id} & \\
+\hline
+{\em id\+User} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}\label{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}} 
+\index{Entrenamiento@{Entrenamiento}!load@{load}}
+\index{load@{load}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Entrenamiento\+::load (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}{Entrenamiento\+::load}} Carga los datos de un formulario para crear o actualizar un Entrenamiento.\+s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntrenamiento_a61ef0379c2793e1562b90597f6c37888}\label{classEntrenamiento_a61ef0379c2793e1562b90597f6c37888}} 
+\index{Entrenamiento@{Entrenamiento}!load@{load}}
+\index{load@{load}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Entrenamiento\+::load (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a5123ff9d743058d3c939b56926200f11}{Entrenamiento\+::load}} Carga los datos de un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} de la bbdd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEntrenamiento_adedf18d9eef76aab0c4d6325de2ff175}\label{classEntrenamiento_adedf18d9eef76aab0c4d6325de2ff175}} 
+\index{Entrenamiento@{Entrenamiento}!remove@{remove}}
+\index{remove@{remove}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Entrenamiento\+::remove (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_adedf18d9eef76aab0c4d6325de2ff175}{Entrenamiento\+::remove}} Elimina un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_a4b97075e3cb6f52c3e1bf2117e276875}\label{classEntrenamiento_a4b97075e3cb6f52c3e1bf2117e276875}} 
+\index{Entrenamiento@{Entrenamiento}!save@{save}}
+\index{save@{save}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Entrenamiento\+::save (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a4b97075e3cb6f52c3e1bf2117e276875}{Entrenamiento\+::save}} Guarda un \mbox{\hyperlink{classEntrenamiento}{Entrenamiento}} en la bbdd, si es un entrenamiento nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se hace un U\+P\+D\+A\+TE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEntrenamiento_a4a0e1dcb5ff226db68e8621a7102ee12}\label{classEntrenamiento_a4a0e1dcb5ff226db68e8621a7102ee12}} 
+\index{Entrenamiento@{Entrenamiento}!to\+J\+S\+ON@{to\+J\+S\+ON}}
+\index{to\+J\+S\+ON@{to\+J\+S\+ON}!Entrenamiento@{Entrenamiento}}
+\subsubsection{\texorpdfstring{to\+J\+S\+O\+N()}{toJSON()}}
+{\footnotesize\ttfamily J\+S\+ON Entrenamiento\+::to\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEntrenamiento_a4a0e1dcb5ff226db68e8621a7102ee12}{Entrenamiento\+::to\+J\+S\+ON}} Transforma un entrenamiento a J\+S\+ON. 
+
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+entrenamiento.\+h\item 
+\mbox{\hyperlink{entrenamiento_8cpp}{entrenamiento.\+cpp}}\end{DoxyCompactItemize}

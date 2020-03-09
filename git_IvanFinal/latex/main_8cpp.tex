@@ -1,0 +1,75 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}ixwebsocket/\+I\+X\+Web\+Socket\+Server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ixwebsocket/\+I\+X\+Web\+Socket.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ixwebsocket/\+I\+X\+Connection\+State.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usuario.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ejercicio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}entrenamiento.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conexion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}json.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+Core\+Application$>$}\newline
+{\ttfamily \#include $<$Q\+Translator$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Error$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Database$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Query$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Record$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ab6104b89642419db4e355b7b2e40abbe}\label{main_8cpp_ab6104b89642419db4e355b7b2e40abbe}} 
+using {\bfseries J\+S\+ON} = nlohmann\+::json
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a57545cfd6177ab52f91ef3042d9a01ae}{exists}} (const J\+S\+ON \&json, const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em exists Comprueba si existe algun objeto en un J\+S\+ON. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a59f27d544b585e216ba9f06410d611ed}{nuevo\+Id}} ()
+\begin{DoxyCompactList}\small\item\em nuevo\+Id Crea un nuevo ID para los mensajes del servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a57545cfd6177ab52f91ef3042d9a01ae}\label{main_8cpp_a57545cfd6177ab52f91ef3042d9a01ae}} 
+\index{main.\+cpp@{main.\+cpp}!exists@{exists}}
+\index{exists@{exists}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool exists (\begin{DoxyParamCaption}\item[{const J\+S\+ON \&}]{json,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+exists Comprueba si existe algun objeto en un J\+S\+ON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & \\
+\hline
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Text format \mbox{\Hypertarget{main_8cpp_a59f27d544b585e216ba9f06410d611ed}\label{main_8cpp_a59f27d544b585e216ba9f06410d611ed}} 
+\index{main.\+cpp@{main.\+cpp}!nuevo\+Id@{nuevo\+Id}}
+\index{nuevo\+Id@{nuevo\+Id}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{nuevo\+Id()}{nuevoId()}}
+{\footnotesize\ttfamily int nuevo\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+nuevo\+Id Crea un nuevo ID para los mensajes del servidor. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

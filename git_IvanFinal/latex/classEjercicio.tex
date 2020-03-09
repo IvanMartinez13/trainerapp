@@ -1,0 +1,236 @@
+\hypertarget{classEjercicio}{}\section{Ejercicio Class Reference}
+\label{classEjercicio}\index{Ejercicio@{Ejercicio}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEjercicio_a800393fb488a95c069f094a42d71b281}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a800393fb488a95c069f094a42d71b281}{Ejercicio\+::get\+ID}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEjercicio_a82102164a1561e4990622c709969d94b}{load}} (J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a82102164a1561e4990622c709969d94b}{Ejercicio\+::load}} Carga los datos del formulario para crear un ejercicio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEjercicio_ad0f313e73879f697532a73e6c70529ab}{load}} (Q\+Sql\+Database db, int id)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a82102164a1561e4990622c709969d94b}{Ejercicio\+::load}} Cargar los datos de los ejercicios de la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEjercicio_a0012834d5116ad4f816e86854c8a54ef}{save}} (Q\+Sql\+Database db, int id\+User)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a0012834d5116ad4f816e86854c8a54ef}{Ejercicio\+::save}} Guarda un ejercicio en la bbdd. Si es un ejercicio nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se realiza un U\+P\+D\+A\+TE. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEjercicio_a1d7547a6bb4ea39ec2bf6bd95d33b97d}{remove}} (Q\+Sql\+Database db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a1d7547a6bb4ea39ec2bf6bd95d33b97d}{Ejercicio\+::remove}} Elimina un ejercicio de la bbdd. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEjercicio_a1b2d63f61871391ed1a8d3b47baff737}{listar}} (Q\+Sql\+Database db, int id, int id\+User, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a1b2d63f61871391ed1a8d3b47baff737}{Ejercicio\+::listar}} Devuelve un J\+S\+ON con un listado de los ejercicios de un usuario en concreto. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEjercicio_af4b3083a2d616daee78a5b39c62ff2be}{to\+J\+S\+ON}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_af4b3083a2d616daee78a5b39c62ff2be}{Ejercicio\+::to\+J\+S\+ON}} parsea el \mbox{\hyperlink{classEjercicio}{Ejercicio}} a J\+S\+ON. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEjercicio}{Ejercicio}} \mbox{\hyperlink{classEjercicio_a2a96cf1b169835e7fb9546765e11fbc6}{to\+Ejercicio}} (Q\+Sql\+Database db, J\+S\+ON Mensaje)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a2a96cf1b169835e7fb9546765e11fbc6}{Ejercicio\+::to\+Ejercicio}} Transforma un J\+S\+ON a \mbox{\hyperlink{classEjercicio}{Ejercicio}}. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEjercicio_a84f913ec55c51739867e7365b69684cb}{crear\+Ejercicio}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a84f913ec55c51739867e7365b69684cb}{Ejercicio\+::crear\+Ejercicio}} Respuesta al cliente por crear un ejercicio. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEjercicio_a26572720af03b741e5e13a3a1a5b4dcc}{acualizar\+Ejercicio}} (int id, J\+S\+ON recibido)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_a26572720af03b741e5e13a3a1a5b4dcc}{Ejercicio\+::acualizar\+Ejercicio}} Respuesta al cliente por actualizar un ejercicio. \end{DoxyCompactList}\item 
+J\+S\+ON \mbox{\hyperlink{classEjercicio_ac6f014c19c08a8f010723fa60f736bf2}{eliminar\+Ejercicio}} (int id, J\+S\+ON recibido, bool eliminado)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEjercicio_ac6f014c19c08a8f010723fa60f736bf2}{Ejercicio\+::eliminar\+Ejercicio}} Respuesta al cliente por eleiminar un ejercicio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEjercicio_a26572720af03b741e5e13a3a1a5b4dcc}\label{classEjercicio_a26572720af03b741e5e13a3a1a5b4dcc}} 
+\index{Ejercicio@{Ejercicio}!acualizar\+Ejercicio@{acualizar\+Ejercicio}}
+\index{acualizar\+Ejercicio@{acualizar\+Ejercicio}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{acualizar\+Ejercicio()}{acualizarEjercicio()}}
+{\footnotesize\ttfamily J\+S\+ON Ejercicio\+::acualizar\+Ejercicio (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a26572720af03b741e5e13a3a1a5b4dcc}{Ejercicio\+::acualizar\+Ejercicio}} Respuesta al cliente por actualizar un ejercicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a84f913ec55c51739867e7365b69684cb}\label{classEjercicio_a84f913ec55c51739867e7365b69684cb}} 
+\index{Ejercicio@{Ejercicio}!crear\+Ejercicio@{crear\+Ejercicio}}
+\index{crear\+Ejercicio@{crear\+Ejercicio}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{crear\+Ejercicio()}{crearEjercicio()}}
+{\footnotesize\ttfamily J\+S\+ON Ejercicio\+::crear\+Ejercicio (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a84f913ec55c51739867e7365b69684cb}{Ejercicio\+::crear\+Ejercicio}} Respuesta al cliente por crear un ejercicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_ac6f014c19c08a8f010723fa60f736bf2}\label{classEjercicio_ac6f014c19c08a8f010723fa60f736bf2}} 
+\index{Ejercicio@{Ejercicio}!eliminar\+Ejercicio@{eliminar\+Ejercicio}}
+\index{eliminar\+Ejercicio@{eliminar\+Ejercicio}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{eliminar\+Ejercicio()}{eliminarEjercicio()}}
+{\footnotesize\ttfamily J\+S\+ON Ejercicio\+::eliminar\+Ejercicio (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{J\+S\+ON}]{recibido,  }\item[{bool}]{eliminado }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_ac6f014c19c08a8f010723fa60f736bf2}{Ejercicio\+::eliminar\+Ejercicio}} Respuesta al cliente por eleiminar un ejercicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em recibido} & \\
+\hline
+{\em eliminado} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a800393fb488a95c069f094a42d71b281}\label{classEjercicio_a800393fb488a95c069f094a42d71b281}} 
+\index{Ejercicio@{Ejercicio}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily int Ejercicio\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a800393fb488a95c069f094a42d71b281}{Ejercicio\+::get\+ID}}. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a1b2d63f61871391ed1a8d3b47baff737}\label{classEjercicio_a1b2d63f61871391ed1a8d3b47baff737}} 
+\index{Ejercicio@{Ejercicio}!listar@{listar}}
+\index{listar@{listar}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily J\+S\+ON Ejercicio\+::listar (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id,  }\item[{int}]{id\+User,  }\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a1b2d63f61871391ed1a8d3b47baff737}{Ejercicio\+::listar}} Devuelve un J\+S\+ON con un listado de los ejercicios de un usuario en concreto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id} & \\
+\hline
+{\em id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a82102164a1561e4990622c709969d94b}\label{classEjercicio_a82102164a1561e4990622c709969d94b}} 
+\index{Ejercicio@{Ejercicio}!load@{load}}
+\index{load@{load}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Ejercicio\+::load (\begin{DoxyParamCaption}\item[{J\+S\+ON}]{recibido }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a82102164a1561e4990622c709969d94b}{Ejercicio\+::load}} Carga los datos del formulario para crear un ejercicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recibido} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEjercicio_ad0f313e73879f697532a73e6c70529ab}\label{classEjercicio_ad0f313e73879f697532a73e6c70529ab}} 
+\index{Ejercicio@{Ejercicio}!load@{load}}
+\index{load@{load}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Ejercicio\+::load (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a82102164a1561e4990622c709969d94b}{Ejercicio\+::load}} Cargar los datos de los ejercicios de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEjercicio_a1d7547a6bb4ea39ec2bf6bd95d33b97d}\label{classEjercicio_a1d7547a6bb4ea39ec2bf6bd95d33b97d}} 
+\index{Ejercicio@{Ejercicio}!remove@{remove}}
+\index{remove@{remove}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Ejercicio\+::remove (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a1d7547a6bb4ea39ec2bf6bd95d33b97d}{Ejercicio\+::remove}} Elimina un ejercicio de la bbdd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a0012834d5116ad4f816e86854c8a54ef}\label{classEjercicio_a0012834d5116ad4f816e86854c8a54ef}} 
+\index{Ejercicio@{Ejercicio}!save@{save}}
+\index{save@{save}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Ejercicio\+::save (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{int}]{id\+User }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a0012834d5116ad4f816e86854c8a54ef}{Ejercicio\+::save}} Guarda un ejercicio en la bbdd. Si es un ejercicio nuevo se hace un I\+N\+S\+E\+RT, de lo contrario se realiza un U\+P\+D\+A\+TE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em id\+User} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_a2a96cf1b169835e7fb9546765e11fbc6}\label{classEjercicio_a2a96cf1b169835e7fb9546765e11fbc6}} 
+\index{Ejercicio@{Ejercicio}!to\+Ejercicio@{to\+Ejercicio}}
+\index{to\+Ejercicio@{to\+Ejercicio}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{to\+Ejercicio()}{toEjercicio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEjercicio}{Ejercicio}} Ejercicio\+::to\+Ejercicio (\begin{DoxyParamCaption}\item[{Q\+Sql\+Database}]{db,  }\item[{J\+S\+ON}]{Mensaje }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_a2a96cf1b169835e7fb9546765e11fbc6}{Ejercicio\+::to\+Ejercicio}} Transforma un J\+S\+ON a \mbox{\hyperlink{classEjercicio}{Ejercicio}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \\
+\hline
+{\em Mensaje} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classEjercicio}{Ejercicio}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEjercicio_af4b3083a2d616daee78a5b39c62ff2be}\label{classEjercicio_af4b3083a2d616daee78a5b39c62ff2be}} 
+\index{Ejercicio@{Ejercicio}!to\+J\+S\+ON@{to\+J\+S\+ON}}
+\index{to\+J\+S\+ON@{to\+J\+S\+ON}!Ejercicio@{Ejercicio}}
+\subsubsection{\texorpdfstring{to\+J\+S\+O\+N()}{toJSON()}}
+{\footnotesize\ttfamily J\+S\+ON Ejercicio\+::to\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classEjercicio_af4b3083a2d616daee78a5b39c62ff2be}{Ejercicio\+::to\+J\+S\+ON}} parsea el \mbox{\hyperlink{classEjercicio}{Ejercicio}} a J\+S\+ON. 
+
+\begin{DoxyReturn}{Returns}
+J\+S\+ON 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ejercicio.\+h\item 
+\mbox{\hyperlink{ejercicio_8cpp}{ejercicio.\+cpp}}\end{DoxyCompactItemize}
